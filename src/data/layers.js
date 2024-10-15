@@ -1,0 +1,98 @@
+export const layers = [
+  {
+    name: "Activation",
+    params: ["activation"],
+    param_desc: [
+      {
+        name: "activation",
+        type: "select",
+        options: [
+          "linear",
+          "deserialize",
+          "elu",
+          "exponential",
+          "gelu",
+          "hard_sigmoid",
+          "hard_silu",
+          "leaky_relu",
+          "log_softmax",
+          "mish",
+          "relu",
+          "relu6",
+          "selu",
+          "serialize",
+          "softmax",
+          "softplus",
+          "softsign",
+          "swish",
+          "tanh",
+        ],
+        description: "Activation function to use.",
+        default: "linear",
+        required: false,
+      },
+    ],
+    description: "Applies an activation function to an output.",
+    href: "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Activation",
+  },
+  {
+    name: "ActivityRegularization",
+    params: ["l1", "l2"],
+    param_desc: [
+      {
+        name: "L1",
+        type: "float",
+        min: 0.0,
+        max: null,
+        description: "L1 regularization factor.",
+        default: 0.0,
+        required: false,
+      },
+      {
+        name: "L2",
+        type: "float",
+        min: 0.0,
+        max: null,
+        description: "L2 regularization factor.",
+        default: 0.0,
+        required: false,
+      },
+    ],
+    description:
+      "Layer that applies an update to the cost function based input activity.",
+    href: "https://www.tensorflow.org/api_docs/python/tf/keras/layers/ActivityRegularization",
+  },
+  {
+    name: "Add",
+    params: [],
+    param_desc: [],
+    description: "Performs element-wise addition operation.",
+    href: "https://www.tensorflow.org/api_docs/python/tf/keras/layers/Add",
+  },
+  {
+    name: "AdditiveAttention",
+    params: ["use_scale", "dropout"],
+    param_desc: [
+      {
+        name: "use_scale",
+        type: "bool",
+        description:
+          "If True, will create a scalar variable to scale the attention scores.",
+        default: true,
+        required: false,
+      },
+      {
+        name: "dropout",
+        type: "float",
+        min: 0.0,
+        max: 1.0,
+        description:
+          "Float between 0 and 1. Fraction of the units to drop for the attention scores.",
+        default: 0.0,
+        required: false,
+      },
+    ],
+    description: "Additive attention layer.",
+    href: "https://www.tensorflow.org/api_docs/python/tf/keras/layers/AdditiveAttention",
+  },
+];
